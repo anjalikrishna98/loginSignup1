@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+
+import 'login.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -8,8 +12,20 @@ void main() {
   ));
 }
 
-class MainScreen extends StatelessWidget {
+class MainScreen extends StatefulWidget {
   @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  @override
+  void initState() {
+    Timer(Duration(seconds: 5), () {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => LoginPage()),
+      );
+    });
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(

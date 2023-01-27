@@ -1,24 +1,8 @@
-import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:loginsignupui/signup.dart';
 
-class LoginPage extends StatefulWidget {
+class SignUp extends StatelessWidget {
   @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
-  @override
-  void initState() {
-    Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => SignUp())
-      );
-    });
-  }
-
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -32,16 +16,18 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             const Padding(
               padding: EdgeInsets.only(top: 20),
-              child: Text("Login",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30)),
+              child: Text(
+                "Sign Up",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
+              ),
             ),
             const Padding(
               padding: EdgeInsets.only(top: 20),
               child: Text(
-                'Welcome Back ! Login with your credentials',
+                "Create an account , It's free",
                 style: TextStyle(
                     color: Colors.grey,
                     fontSize: 15,
@@ -52,34 +38,44 @@ class _LoginPageState extends State<LoginPage> {
               padding: const EdgeInsets.only(left: 80, right: 80, top: 10),
               child: TextField(
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(80)),
-                    hintText: 'UserName',
-                    prefixIcon: const Icon(Icons.account_circle),
-                    labelText: 'User Name'),
+                    border:
+                        OutlineInputBorder(borderRadius: BorderRadius.circular(80)),
+                    hintText: 'EMAIL ID',
+                    prefixIcon: Icon(Icons.email),
+                    labelText: 'EMAIL'),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 80, right: 80, top: 10),
               child: TextField(
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(80)),
-                    hintText: 'Password',
-                    prefixIcon: const Icon(Icons.password),
-                    labelText: 'Password'),
+                    border:
+                        OutlineInputBorder(borderRadius: BorderRadius.circular(80)),
+                    hintText: 'PASSWORD',
+                    prefixIcon: Icon(Icons.password),
+                    labelText: 'PASSWORD'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 80, right: 80, top: 10),
+              child: TextField(
+                decoration: InputDecoration(
+                  border:
+                      OutlineInputBorder(borderRadius: BorderRadius.circular(80)),
+                  hintText: 'PASSWORD',
+                  prefixIcon: Icon(Icons.password),
+                  labelText: 'CONFIRM PASSWORD',
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20),
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text('Login'),
+              child: ElevatedButton(onPressed: (){}, child: Text('Sign Up')
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 20),
-              child: Text("Don't you have any account? SignUp"),
+              padding:  EdgeInsets.only(top: 20),
+              child: Text('Do you have an account? Login'),
             )
           ],
         ),
