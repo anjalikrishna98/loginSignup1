@@ -54,25 +54,35 @@ class Grid2 extends StatelessWidget {
         title: Text('Grid View'),
       ),
       body: GridView.builder(
-          gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+              childAspectRatio: 2),
           itemCount: 12,
           itemBuilder: (context, index) {
             return Padding(
-              padding: const EdgeInsets.only(left: 20,right: 20,bottom: 20,top: 20),
-              child: Container(
-                decoration: const BoxDecoration(
-                  shape: BoxShape.rectangle
+                padding: EdgeInsets.only(left: 10, right: 10, top: 20),
+                child: Container(
+                  decoration: BoxDecoration(
+                      boxShadow: const [BoxShadow(color: Colors.blueGrey,
+                          blurRadius: 6,
+                          spreadRadius: 5,
+                          offset: Offset(3, 5))],
+                      borderRadius: BorderRadius.circular(10),
+                  color: color[index],
+                  shape: BoxShape.rectangle,
                 ),
-                color: color[index],
-                child: Row(
-                  children: [
-                    FaIcon(icon[index]),
-                    Text("Heart Shaker"),
-                  ],
-                ),
-              ),
-            );
+                child: Center(
+                  child: ListTile(
+                    leading: SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: FaIcon(icon[index]),
+                    ),
+                    title: Text("Heart Shaker"),
+                  ),
+                )),);
           }),
     );
   }
