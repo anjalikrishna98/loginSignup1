@@ -1,13 +1,14 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-
+import 'ContactBookUi.dart';
+import 'ListOfCities.dart';
+import 'ProductListWithCustom.dart';
+import 'listwithbuilder.dart';
 import 'login.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: ThemeData(primarySwatch: Colors.cyan),
     home: MainScreen(),
   ));
 }
@@ -20,9 +21,9 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 5), () {
+    Timer(Duration(seconds: 1), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => LoginPage()),
+        MaterialPageRoute(builder: (context) => ProductList()),
       );
     });
   }
