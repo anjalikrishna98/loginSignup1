@@ -37,32 +37,54 @@ class GridUi2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: (Text('SHRINE')),
-        leading: Icon(Icons.menu),
-        actions: [Icon(Icons.search), Icon(Icons.filter_1)],
-      ),
-      body: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-          itemCount: images.length,
-          itemBuilder: (context,index){
-            return Card(
-              child: Column(
+        appBar: AppBar(
+          title: (Text('SHRINE')),
+          leading: Icon(Icons.menu),
+          actions: [Icon(Icons.search), Icon(Icons.filter_1)],
+        ),
+        body: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2),
+            itemCount: images.length,
+            itemBuilder: (context, index) {
+              return Card(
+                child: Column(
                   children: [
-              Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: Container(
-                height: 120,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(3),
-                    image: DecorationImage(
-                        fit: BoxFit.fill,
-                        image: NetworkImage(images[index]))),
-              ),
-            );
-            )
-            );
-      }
-      ),
-    );
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Container(
+                        height: 120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(3),
+                            image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: NetworkImage(images[index]))),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 15, top: 5, bottom: 5),
+                      child: Column(
+                        children: [
+                          Container(
+                            alignment: Alignment.bottomLeft,
+                            child: Text(names[index],
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 20)),
+                          ),
+                          Container(
+                              alignment: Alignment.bottomLeft,
+                              child: Text(
+                                "\$${price[index]}",
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold),
+                              ))
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              );
+            }));
   }
 }
