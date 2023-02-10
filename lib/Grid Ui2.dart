@@ -45,17 +45,24 @@ class GridUi2 extends StatelessWidget {
       body: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
           itemCount: images.length,
           itemBuilder: (context,index){
-        return Padding(padding: EdgeInsets.all(10),
-        child: Container(
-          height: 100,
-          decoration: BoxDecoration(
-            image: DecorationImage(image: NetworkImage(images[index])),
-            color: Colors.white,
-          ),
-        ),
-        );
-
-      }),
+            return Card(
+              child: Column(
+                  children: [
+              Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: Container(
+                height: 120,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(3),
+                    image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: NetworkImage(images[index]))),
+              ),
+            );
+            )
+            );
+      }
+      ),
     );
   }
 }
