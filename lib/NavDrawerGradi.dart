@@ -90,10 +90,7 @@ class DrawerGrad extends StatelessWidget {
                 width: 100,
                 height: 50,
                 child: ElevatedButton(onPressed: (){}, child: const Text("Log Out"),
-                style:  ButtonStyle(
-                  backgroundColor:MaterialStateProperty.all(Colors.redAccent),
-                  padding: MaterialStateProperty.all(EdgeInsets.all(50)),
-                ),
+
                 ),
               )
             ],
