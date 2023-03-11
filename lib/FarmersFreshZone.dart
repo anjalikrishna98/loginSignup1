@@ -12,7 +12,7 @@ void main() {
       builder: (context) => MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Farmers_Fresh(),
-        theme: ThemeData(primarySwatch: Colors.lightGreen),
+        theme: ThemeData(primarySwatch: Colors.green),
         useInheritedMediaQuery: true,
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
@@ -28,17 +28,18 @@ class Farmers_Fresh extends StatefulWidget {
 
 class _Farmers_FreshState extends State<Farmers_Fresh> {
   var img = [
-    "https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZnJ1aXRzJTIwYW5kJTIwdmVnZXRhYmxlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    "https://media.istockphoto.com/id/1306511017/photo/healthy-food-background-healthy-vegan-vegetarian-food-in-paper-bag-vegetables-and-fruits-on.jpg?b=1&s=170667a&w=0&k=20&c=L0sPEI7v7zeNAV5ZUB_2k_dK_Fjm-lxrx3Btmc4SgPI=",
+    "https://t4.ftcdn.net/jpg/01/25/31/19/360_F_125311972_pKSvvUp8odP1B1rhQ3KCTaL1ky1vaM0G.jpg",
+    "https://media.istockphoto.com/id/1314537808/photo/healthy-fresh-fruits-border-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=fn0tfCZG-Dsw6atMRypwjHh3k2D3k6bk41YxmX6wARk="
   ];
 
   var img1 = [
-    "https://images.unsplash.com/photo-1609842947419-ba4f04d5d60f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fHZlZ2V0YWJsZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZnJ1aXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1527325678964-54921661f888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGV4b3RpYyUyMGZydWl0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1487376480913-24046456a727?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzZ8fGN1dCUyMGZydWl0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1571750007475-09cc42b58613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG51dHJpdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1627735483792-233bf632619b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZmxvdXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "https://media.istockphoto.com/id/1247073860/photo/healthy-fresh-organic-vegetables-in-a-crate-isolated-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=k6cDRVUBEUOQF97NJAq_pvlRedTn7Qr1NYvWQcjOTTk=",
+    "https://media.istockphoto.com/id/173255460/photo/assortment-of-fruits.jpg?b=1&s=170667a&w=0&k=20&c=DTUxwA3VoqtIwRHy9mwFi8vFeMlPtrwULj8KJkeiwlE=",
+    "https://plus.unsplash.com/premium_photo-1675639895212-696149c275f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZXhvdGljJTIwZm9vZHxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "https://media.istockphoto.com/id/1310910433/photo/selection-of-assorted-raw-meat-food-for-zero-carb-carnivore-diet-uncooked-beef-steak-ground.jpg?b=1&s=170667a&w=0&k=20&c=kHDw07LONz2akPa8pPe_rhUXhoc_aCryBdgI9G2QG3g=",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGhlYWx0aHklMjBudXRyaXRpb258ZW58MHx8MHx8&w=1000&q=80",
+    "https://images.unsplash.com/photo-1627485937980-221c88ac04f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmxvdXJ8ZW58MHx8MHx8&w=1000&q=80",
   ];
 
   var txt = [
@@ -55,9 +56,9 @@ class _Farmers_FreshState extends State<Farmers_Fresh> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.lightGreen,
-        buttonBackgroundColor: Colors.lightGreen,
-        backgroundColor: Colors.blue[100]!,
+        color: Colors.green,
+        buttonBackgroundColor: Colors.green,
+        backgroundColor: Colors.lightGreen,
         index: index,
         onTap: (taped_index) {
           setState(() {
@@ -136,33 +137,33 @@ class _Farmers_FreshState extends State<Farmers_Fresh> {
                         width: 100,
                         height: 60,
                         decoration: BoxDecoration(
-                            color: Colors.blue[100],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
-                        child: const Center(child: Text("VEGETABLES")),
+                        child: const Center(child: Text("VEGETABLES",style: TextStyle(color: Colors.green)),),
                       ),
                       Container(
                         width: 80,
                         height: 100,
                         decoration: BoxDecoration(
-                            color: Colors.blue[100],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
-                        child: const Center(child: Text("FRUITS")),
+                        child: const Center(child: Text("FRUITS",style: TextStyle(color: Colors.green))),
                       ),
                       Container(
                         width: 80,
                         height: 100,
                         decoration: BoxDecoration(
-                            color: Colors.blue[100],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
-                        child: const Center(child: Text("EXOTIC")),
+                        child: const Center(child: Text("EXOTIC",style: TextStyle(color: Colors.green))),
                       ),
                       Container(
                         width: 100,
                         height: 100,
                         decoration: BoxDecoration(
-                            color: Colors.blue[100],
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
-                        child: const Center(child: Text("FRESH CUTS")),
+                        child: const Center(child: Text("FRESH CUTS",style: TextStyle(color: Colors.green),)),
                       ),
                     ],
                   ),
@@ -172,19 +173,18 @@ class _Farmers_FreshState extends State<Farmers_Fresh> {
         SliverList(
             delegate: SliverChildListDelegate([
               CarouselSlider.builder(
-                  itemCount: 2,
+                  itemCount: 3,
                   itemBuilder: (BuildContext, index, realindex) {
                     return Container(
                       height: 600,
-                      width: 500,
+                      width: 600,
                       child: Image(
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                         image: NetworkImage(img[index]),
                       ),
                     );
                   },
                   options: CarouselOptions(
-                    // height: 300,
                     aspectRatio: 16 / 9,
                     viewportFraction: 0.8,
                     initialPage: 0,
@@ -197,7 +197,7 @@ class _Farmers_FreshState extends State<Farmers_Fresh> {
                     enlargeCenterPage: true,
                     enlargeFactor: 1,
                     //onPageChanged: callbackFunction,
-                    scrollDirection: Axis.vertical,
+                    scrollDirection: Axis.horizontal,
                   ))
             ])),
         SliverList(
@@ -210,13 +210,13 @@ class _Farmers_FreshState extends State<Farmers_Fresh> {
                     children: [
                       Container(
                         child: Column(
-                          children: [
+                          children:  const [
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: EdgeInsets.all(8.0),
                               child: Icon(Icons.timer_sharp,
-                                  size: 40, color: Colors.blue[200]),
+                                  size: 40, color: Colors.lightGreen),
                             ),
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.only(top: 5, bottom: 8),
                               child: Text("TIMELY DELIVERY",
                                   style: TextStyle(fontSize: 12)),
@@ -226,13 +226,13 @@ class _Farmers_FreshState extends State<Farmers_Fresh> {
                       ),
                       Container(
                         child: Column(
-                          children: [
+                          children: const [
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: EdgeInsets.all(8.0),
                               child: Icon(Icons.spatial_tracking_outlined,
-                                  size: 40, color: Colors.blue[200]),
+                                  size: 40, color: Colors.lightGreen),
                             ),
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.only(top: 5, bottom: 8),
                               child: Text("TRACEABILTY",
                                   style: TextStyle(fontSize: 12)),
@@ -242,13 +242,13 @@ class _Farmers_FreshState extends State<Farmers_Fresh> {
                       ),
                       Container(
                         child: Column(
-                          children: [
+                          children: const [
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: EdgeInsets.all(8.0),
                               child: Icon(Icons.local_convenience_store_rounded,
-                                  size: 40, color: Colors.blue[200]),
+                                  size: 40, color: Colors.lightGreen),
                             ),
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.only(top: 5.0, bottom: 8),
                               child: Text("LOCAL SOURCING",
                                   style: TextStyle(fontSize: 12)),
